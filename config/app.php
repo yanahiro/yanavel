@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ja',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,6 +167,10 @@ return [
         /*
          * Package Service Providers...
          */
+        Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -176,6 +180,16 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        /**
+         * Base Service Provider
+         */
+        App\Base\Services\Breadcrumb\BreadcrumbProvider::class,
+        App\Base\Services\Constant\ConstantProvider::class,
+        App\Base\Services\CustomSession\Once\OnceProvider::class,
+        App\Base\Services\CustomSession\UnitSession\UnitSessionProvider::class,
+        App\Base\Services\Globality\GlobalityProvider::class,
+        App\Base\Services\ViewRenderer\RenderUtilProvider::class,
 
     ],
 
@@ -225,6 +239,29 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /**
+         * add Aliases
+         */
+        'Input' => Illuminate\Support\Facades\Input::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Flash'     => Laracasts\Flash\Flash::class,
+
+        /**
+         * Base Service Aliases
+         */
+        'Breadcrumb'=> App\Base\Services\Breadcrumb\Facade::class,
+        'Constant'  => App\Base\Services\Constant\Facade::class,
+        'Globality'  => App\Base\Services\Globality\Facade::class,
+        'Once'      => App\Base\Services\CustomSession\Once\Facade::class,
+        'UnitSession'     => App\Base\Services\CustomSession\UnitSession\Facade::class,
+        'ListView'     => App\Base\Services\ViewRenderer\ListView\Facade::class,
+        'FormView'     => App\Base\Services\ViewRenderer\FormView\Facade::class,
+        'SearchView'   => App\Base\Services\ViewRenderer\SearchView\Facade::class,
+        'Widget'    => App\Base\Services\ViewRenderer\Widget\Facade::class,
+        'Button'    => App\Base\Services\ViewRenderer\Button\Facade::class,
 
     ],
 

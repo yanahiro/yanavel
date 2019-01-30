@@ -24,7 +24,7 @@ gulp.task('scss', function() {
       cssnext({browsers: 'last 10 versions' // last 2 versions,  '> 0%'
     })
   ];
-  return gulp.src('./resources/scss/style.scss')
+  return gulp.src('./resources/assets/sass/style.scss')
       .pipe(sass({
         outputStyle : 'expanded'
       }))
@@ -36,7 +36,7 @@ gulp.task('scss', function() {
 
 gulp.task("watch", function() {  
   var targets = [
-    './resources/scss/**'
+    './resources/assets/sass/**'
   ];
   // gulp.watch(targets, ['scss']);
   gulp.watch(targets, gulp.series('scss'));
