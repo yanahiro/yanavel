@@ -3,7 +3,7 @@
     <div class="la-block">
       <table class="table is-bordered is-striped is-fullwidth">
         <thead>
-          <tr class="has-background-dark">
+          <tr>
             @foreach($list['columns'] as $key => $column)
               <th @if(isset($column['width']))width="{{ $column['width'] }}"@endif>
                 @if(isset($search) && in_array($key, $search['order']['permit']))

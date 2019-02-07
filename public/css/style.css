@@ -1,37 +1,650 @@
 @charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /**
  * font-size調整
  */
-/*html {*/
-  /*font-size: 62.5%;*/
-  /*!*ベースを10pxにしています*!*/
-/*}*/
-
-/*body {*/
-  /*font-size: 16px;*/
-  /*font-size: 1.6rem;*/
-  /*!*16px*!*/
-/*}*/
-
 .card {
-  padding: 10px;
+  padding: 16px;
   padding: 1rem;
 }
 
 .card .menu-icon {
-  font-size: 40px;
+  font-size: 64px;
   font-size: 4rem;
   text-align: center;
-  padding: 5px 0 0;
+  padding: 8px 0 0;
   padding: .5rem 0 0;
 }
 
 .card .menu-title {
-  font-size: 10px;
+  font-size: 16px;
   font-size: 1rem;
   text-align: center;
-  padding: 5px 0 10px;
+  padding: 8px 0 16px;
   padding: .5rem 0 1rem;
+}
+
+/**
+ * custom
+ */
+.hero.header {
+  background-color: #3E3331;
+}
+
+.hero.header .title, .hero.header .subtitle {
+  color: #fff;
+}
+
+.button {
+  background-color: #3E3331;
+  color: #fff;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.button:hover {
+  color: #aaa;
+}
+
+.result-count {
+  font-size: 12.8px;
+  font-size: .8rem;
+  padding-top: 24px;
+  padding-top: 1.5rem;
+}
+
+.table thead tr {
+  background-color: #3E3331;
+}
+
+.table thead tr th a {
+  color: #fff;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.table thead tr th a:hover {
+  color: #aaa;
+}
+
+/**
+ *
+ * 汎用CSS
+ * よく利用する装飾用CSS
+ *
+ * @author yanahiro
+ * @since 2018.12.01
+ *
+**/
+/*
+ * padding上下用CSS(5px毎に作成)
+ */
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
+.pt0 {
+  padding-top: 0px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.pt5 {
+  padding-top: 5px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.pt10 {
+  padding-top: 10px !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+
+.pt15 {
+  padding-top: 15px !important;
+}
+
+.mb20 {
+  margin-bottom: 20px !important;
+}
+
+.pt20 {
+  padding-top: 20px !important;
+}
+
+.mb25 {
+  margin-bottom: 25px !important;
+}
+
+.pt25 {
+  padding-top: 25px !important;
+}
+
+.mb30 {
+  margin-bottom: 30px !important;
+}
+
+.pt30 {
+  padding-top: 30px !important;
+}
+
+.mb35 {
+  margin-bottom: 35px !important;
+}
+
+.pt35 {
+  padding-top: 35px !important;
+}
+
+.mb40 {
+  margin-bottom: 40px !important;
+}
+
+.pt40 {
+  padding-top: 40px !important;
+}
+
+.mb45 {
+  margin-bottom: 45px !important;
+}
+
+.pt45 {
+  padding-top: 45px !important;
+}
+
+.mb50 {
+  margin-bottom: 50px !important;
+}
+
+.pt50 {
+  padding-top: 50px !important;
+}
+
+.mb55 {
+  margin-bottom: 55px !important;
+}
+
+.pt55 {
+  padding-top: 55px !important;
+}
+
+.mb60 {
+  margin-bottom: 60px !important;
+}
+
+.pt60 {
+  padding-top: 60px !important;
+}
+
+.mb65 {
+  margin-bottom: 65px !important;
+}
+
+.pt65 {
+  padding-top: 65px !important;
+}
+
+.mb70 {
+  margin-bottom: 70px !important;
+}
+
+.pt70 {
+  padding-top: 70px !important;
+}
+
+.mb75 {
+  margin-bottom: 75px !important;
+}
+
+.pt75 {
+  padding-top: 75px !important;
+}
+
+.mb80 {
+  margin-bottom: 80px !important;
+}
+
+.pt80 {
+  padding-top: 80px !important;
+}
+
+.mb85 {
+  margin-bottom: 85px !important;
+}
+
+.pt85 {
+  padding-top: 85px !important;
+}
+
+.mb90 {
+  margin-bottom: 90px !important;
+}
+
+.pt90 {
+  padding-top: 90px !important;
+}
+
+.mb95 {
+  margin-bottom: 95px !important;
+}
+
+.pt95 {
+  padding-top: 95px !important;
+}
+
+.mb100 {
+  margin-bottom: 100px !important;
+}
+
+.pt100 {
+  padding-top: 100px !important;
+}
+
+/*
+ * margin右用CSS(5px毎に作成)
+ */
+.mr0 {
+  margin-right: 0px !important;
+}
+
+.mr5 {
+  margin-right: 5px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.mr15 {
+  margin-right: 15px !important;
+}
+
+.mr20 {
+  margin-right: 20px !important;
+}
+
+.mr25 {
+  margin-right: 25px !important;
+}
+
+.mr30 {
+  margin-right: 30px !important;
+}
+
+.mr35 {
+  margin-right: 35px !important;
+}
+
+.mr40 {
+  margin-right: 40px !important;
+}
+
+.mr45 {
+  margin-right: 45px !important;
+}
+
+.mr50 {
+  margin-right: 50px !important;
+}
+
+.mr55 {
+  margin-right: 55px !important;
+}
+
+.mr60 {
+  margin-right: 60px !important;
+}
+
+.mr65 {
+  margin-right: 65px !important;
+}
+
+.mr70 {
+  margin-right: 70px !important;
+}
+
+.mr75 {
+  margin-right: 75px !important;
+}
+
+.mr80 {
+  margin-right: 80px !important;
+}
+
+.mr85 {
+  margin-right: 85px !important;
+}
+
+.mr90 {
+  margin-right: 90px !important;
+}
+
+.mr95 {
+  margin-right: 95px !important;
+}
+
+.mr100 {
+  margin-right: 100px !important;
+}
+
+/*
+ * 幅指定CSS(5%単位で作成)
+ */
+.wid-per0 {
+  width: 0% !important;
+}
+
+.wid-per5 {
+  width: 5% !important;
+}
+
+.wid-per10 {
+  width: 10% !important;
+}
+
+.wid-per15 {
+  width: 15% !important;
+}
+
+.wid-per20 {
+  width: 20% !important;
+}
+
+.wid-per25 {
+  width: 25% !important;
+}
+
+.wid-per30 {
+  width: 30% !important;
+}
+
+.wid-per35 {
+  width: 35% !important;
+}
+
+.wid-per40 {
+  width: 40% !important;
+}
+
+.wid-per45 {
+  width: 45% !important;
+}
+
+.wid-per50 {
+  width: 50% !important;
+}
+
+.wid-per55 {
+  width: 55% !important;
+}
+
+.wid-per60 {
+  width: 60% !important;
+}
+
+.wid-per65 {
+  width: 65% !important;
+}
+
+.wid-per70 {
+  width: 70% !important;
+}
+
+.wid-per75 {
+  width: 75% !important;
+}
+
+.wid-per80 {
+  width: 80% !important;
+}
+
+.wid-per85 {
+  width: 85% !important;
+}
+
+.wid-per90 {
+  width: 90% !important;
+}
+
+.wid-per95 {
+  width: 95% !important;
+}
+
+.wid-per100 {
+  width: 100% !important;
+}
+
+/*
+ * 幅指定CSS(5%単位で作成)
+ */
+.w0 {
+  width: 0px !important;
+}
+
+.w10 {
+  width: 10px !important;
+}
+
+.w20 {
+  width: 20px !important;
+}
+
+.w30 {
+  width: 30px !important;
+}
+
+.w40 {
+  width: 40px !important;
+}
+
+.w50 {
+  width: 50px !important;
+}
+
+.w60 {
+  width: 60px !important;
+}
+
+.w70 {
+  width: 70px !important;
+}
+
+.w80 {
+  width: 80px !important;
+}
+
+.w90 {
+  width: 90px !important;
+}
+
+.w100 {
+  width: 100px !important;
+}
+
+.w110 {
+  width: 110px !important;
+}
+
+.w120 {
+  width: 120px !important;
+}
+
+.w130 {
+  width: 130px !important;
+}
+
+.w140 {
+  width: 140px !important;
+}
+
+.w150 {
+  width: 150px !important;
+}
+
+.w160 {
+  width: 160px !important;
+}
+
+.w170 {
+  width: 170px !important;
+}
+
+.w180 {
+  width: 180px !important;
+}
+
+.w190 {
+  width: 190px !important;
+}
+
+.w200 {
+  width: 200px !important;
+}
+
+.w210 {
+  width: 210px !important;
+}
+
+.w220 {
+  width: 220px !important;
+}
+
+.w230 {
+  width: 230px !important;
+}
+
+.w240 {
+  width: 240px !important;
+}
+
+.w250 {
+  width: 250px !important;
+}
+
+.w260 {
+  width: 260px !important;
+}
+
+.w270 {
+  width: 270px !important;
+}
+
+.w280 {
+  width: 280px !important;
+}
+
+.w290 {
+  width: 290px !important;
+}
+
+.w300 {
+  width: 300px !important;
+}
+
+/*
+ * display inline-block用
+ */
+.disp-ilb {
+  display: inline-block;
+}
+
+/* display */
+.disp-none-class {
+  display: none !important;
+}
+
+.po-abs {
+  position: absolute;
+}
+
+.po-rel {
+  position: relative;
+}
+
+/*
+ * display inline-blockの上下中央寄せ用
+ * bvc = block vertical center
+ */
+.bvc {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.vac {
+  vertical-align: bottom;
+}
+
+.br:before {
+  content: "\A";
+  white-space: pre;
 }
 
 /*# sourceMappingURL=style.css.map */

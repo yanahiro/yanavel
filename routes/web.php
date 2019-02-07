@@ -22,6 +22,9 @@ Route::group(['middleware' => []], function()
 });
 
 Auth::routes();
+//getでもログアウト
+$this->get('logout', 'Auth\LoginController@logout')->name('logout');
+
 
 Route::group(['middleware' => ['boot', 'down']], function()
 {

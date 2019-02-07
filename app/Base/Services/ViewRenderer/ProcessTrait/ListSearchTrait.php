@@ -66,7 +66,7 @@ trait ListSearchTrait
         \Button::group('list');
         $buttons = \Button::a('home')
             ->name('ホームへ戻る')
-            ->href('/')
+            ->href('/home')
             ->toArray('list');
         $this->view->with(['buttons' => $buttons]);
 

@@ -1,0 +1,92 @@
+/**
+ *
+ * 汎用CSS
+ * よく利用する装飾用CSS
+ *
+ * @author yanahiro
+ * @since 2018.12.01
+ *
+**/
+
+/*
+ * padding上下用CSS(5px毎に作成)
+ */
+@for $i from 0 through 20 {
+  $y:$i*5;
+  .mb#{$y} {
+    margin-bottom: #{$y}px !important;
+  }
+  .pt#{$y} {
+    padding-top: #{$y}px !important;
+  }
+}
+
+/*
+ * margin右用CSS(5px毎に作成)
+ */
+@for $i from 0 through 20 {
+  $y:$i*5;
+  .mr#{$y} {
+    margin-right: #{$y}px !important;
+  }
+}
+
+/*
+ * 幅指定CSS(5%単位で作成)
+ */
+@for $i from 0 through 20 {
+  $y:$i*5;
+  .wid-per#{$y} {
+    //width: #{$y}% !important;
+    width: #{$y}#{'%'} !important;
+  }
+}
+
+/*
+ * 幅指定CSS(5%単位で作成)
+ */
+@for $i from 0 through 30 {
+  $y:$i*10;
+  .w#{$y} {
+    width: #{$y}px !important;
+  }
+}
+
+
+/*
+ * display inline-block用
+ */
+.disp-ilb {
+  display: inline-block;
+}
+
+/* display */
+.disp-none-class {
+  display: none !important;
+}
+
+.po-abs {
+  position: absolute;
+}
+
+.po-rel {
+  position: relative;
+}
+
+/*
+ * display inline-blockの上下中央寄せ用
+ * bvc = block vertical center
+ */
+.bvc {
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.vac {
+  vertical-align: bottom;
+}
+
+.br:before {
+  content: "\A" ;
+  white-space: pre ;
+}

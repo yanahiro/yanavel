@@ -1,4 +1,4 @@
-<header class="hero is-dark">
+<header class="hero header">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">yanahiro manager System</h1>

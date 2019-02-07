@@ -9,7 +9,7 @@
           <ul>
           @foreach($list['operations']['upper'] as $key => $operation)
             <li>
-              <a href="{{ url($link.'/'.$key) }}" class="button btn-{{ $key }} btn-lg">
+              <a href="{{ url($link.'/'.$key) }}" class="button -{{ $key }} btn-lg">
                 {{ $operation['name'] }}
               </a>
             </li>

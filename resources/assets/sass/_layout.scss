@@ -1,13 +1,12 @@
 /**
  * font-size調整
  */
-html {
-  font-size: 62.5%; /*ベースを10pxにしています*/
-}
-body {
-  font-size: 1.6rem; /*16px*/
-}
-
+//html {
+//  font-size: 62.5%; /*ベースを10pxにしています*/
+//}
+//body {
+//  font-size: 1.6rem; /*16px*/
+//}
 
 .card {
   padding: 1rem;
@@ -26,4 +25,53 @@ body {
 
 .search-area {
 
+}
+
+/**
+ * custom
+ */
+
+.hero {
+  &.header {
+    background-color: #3E3331;
+
+    .title, .subtitle {
+      color: #fff;
+    }
+  }
+}
+
+.button {
+  background-color: #3E3331;
+  color: #fff;
+  transition-property: all;
+  transition: .2s linear;
+
+  &:hover {
+    color: #aaa;
+  }
+
+  .-create {
+  }
+}
+
+.result-count {
+  font-size: .8rem;
+  padding-top: 1.5rem;
+}
+.table {
+  thead {
+    tr {
+      background-color: #3E3331;
+      th a {
+        color: #fff;
+        transition-property: all;
+        transition: 0.3s linear;
+
+        &:hover {
+          color: #aaa;
+        }
+      }
+    }
+  }
 }

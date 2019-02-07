@@ -2,7 +2,7 @@
   <div class="search-area">
     {!! \SearchView::open() !!}
     <div class="sa-block">
-      <div class="reset"><a href="{{ void() }}">reset</a></div>
+      <div class="reset has-text-right mb10"><a href="{{ void() }}" class="button -reset">reset</a></div>
       <div class="sa-conditions">
         @foreach($search['fields'] as $gk => $gv)
           @foreach($gv['fields'] as $k => $v)
@@ -25,7 +25,7 @@
         @endif
       </div>
       <div class="section has-text-centered">
-        <button class="button is-dark">検索</button>
+        <button class="button wid-per30">検索</button>
       </div>
     </div>
     {!! \Form::hidden('rand', str_random(20)) !!}
